@@ -2,7 +2,7 @@
 
 A production-grade **bidirectional Smart HVAC Control System** prototype for residential rooms, featuring a physics-based thermal simulation, AI-powered adaptive control, and a premium Streamlit monitoring dashboard.
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -24,7 +24,7 @@ A production-grade **bidirectional Smart HVAC Control System** prototype for res
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
-## ✨ Key Features
+##  Key Features
 
 - **Bidirectional Control**: Cooling (❄️ >26°C) + Heating (🔥 <20°C) + Idle deadband (20–26°C)
 - **Two Control Strategies**: Rule-based baseline vs Q-Learning adaptive controller
@@ -35,7 +35,7 @@ A production-grade **bidirectional Smart HVAC Control System** prototype for res
 - **ESP32 Firmware**: Complete Arduino code with WiFi, MQTT, OTA updates
 - **Energy Analysis**: Detailed comparison with annual savings projections
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -80,7 +80,7 @@ python run_comparison.py --season winter --days 7
 streamlit run dashboard/app.py
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 HVAC/
@@ -133,15 +133,15 @@ HVAC/
 └── run_comparison.py                  # Controller comparison tool
 ```
 
-## 🌡️ Control Logic
+##  Control Logic
 
 ### Three-Zone Bidirectional Control
 
 | Zone | Temperature | Action | Purpose |
 |------|------------|--------|---------|
-| ❄️ Cooling | T > 26°C | AC compressor ON | Remove excess heat |
-| ⚖️ Idle | 20–26°C | System OFF | Energy conservation |
-| 🔥 Heating | T < 20°C | Heat pump ON | Maintain warmth |
+| Cooling | T > 26°C | AC compressor ON | Remove excess heat |
+|  Idle | 20–26°C | System OFF | Energy conservation |
+|  Heating | T < 20°C | Heat pump ON | Maintain warmth |
 
 ### Hysteresis (Anti-Oscillation)
 
@@ -160,13 +160,13 @@ Heating OFF at T > 20.5°C
 | Unoccupied | 28°C | 18°C |
 | Night (11pm–6am) | 27°C | 19°C |
 
-## 🧠 AI Layer
+##  AI Layer
 
 1. **Pattern Learner** — Identifies daily temperature/occupancy patterns
 2. **Temperature Predictor** — Linear regression model predicting T at 15/30/60 min ahead
 3. **Energy Optimizer** — Pareto-optimal comfort/energy trade-off analysis
 
-## 📊 Expected Results
+##  Expected Results
 
 | Metric | Rule-Based | Adaptive Q-Learning |
 |--------|-----------|-------------------|
@@ -174,7 +174,7 @@ Heating OFF at T > 20.5°C
 | Comfort Score (%) | ~88-92 | ~90-95 |
 | Energy Savings | baseline | **20-35%** |
 
-## ⚡ ESP32 Hardware
+##  ESP32 Hardware
 
 See [`firmware/wiring_diagram.md`](firmware/wiring_diagram.md) for complete hardware setup.
 
@@ -185,6 +185,6 @@ See [`firmware/wiring_diagram.md`](firmware/wiring_diagram.md) for complete hard
 - 2-channel opto-isolated relay module
 - 5V/2A power supply
 
-## 📄 License
+## License
 
 MIT License — See LICENSE file for details.
